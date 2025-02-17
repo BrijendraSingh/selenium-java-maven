@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 src/test/resources/screenshots
+test-output/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
