@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="allSuites" parallel="methods" thread-count="3">
+<suite name="legacyTests" parallel="methods" thread-count="3">
     <suite-files>
         <suite-file path="SafariTests.xml" />
         <suite-file path="ChromeTests.xml" />

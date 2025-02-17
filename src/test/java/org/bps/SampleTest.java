@@ -18,6 +18,6 @@ public class SampleTest extends BaseTest {
     public void failTest(){
         driver.get("https://lambdatest.github.io/sample-todo-app/");
         WebElement header = driver.findElement(By.cssSelector(".ng-binding"));
-        Assert.assertEquals(header.getText(),"LambdaTest Sample App");
+        Assert.assertEquals(header.getText(),"5 of 5 remaining");
     }
 }

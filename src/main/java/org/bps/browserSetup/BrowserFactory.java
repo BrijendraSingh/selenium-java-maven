@@ -1,7 +1,9 @@
 package org.bps.browserSetup;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -20,10 +22,14 @@ public class BrowserFactory {
 
     public static WebDriver initiateDriver(String browser){
         switch (browser){
-            case "CHROME" : return new ChromeDriver();
-            case "FIREFOX" : return new FirefoxDriver();
-            case "SAFARI" : return  new SafariDriver();
-            case "EDGE" : return  new EdgeDriver();
+            case "CHROME" :
+                ChromeOptions options = new ChromeOptions();
+                options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+                driver = new ChromeDriver();
+                return driver;
+            case "FIREFOX" : driver =  new FirefoxDriver(); return driver;
+            case "SAFARI" : driver=  new SafariDriver(); return driver;
+            case "EDGE" : driver=  new EdgeDriver(); return driver;
             default: return null;
         }
     }
