@@ -7,7 +7,5 @@ public class BsDemoPage {
     By title = By.cssSelector("container h2");
 
     //methods
-    public String getBsLandingPageHeader(){
-        return
-    }
+
 }

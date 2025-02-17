@@ -11,6 +11,6 @@ public class SampleTest extends BaseTest {
     public void safariTest(){
         driver.get("https://lambdatest.github.io/sample-todo-app/");
         WebElement header = driver.findElement(By.cssSelector(".container h2"));
-        Assert.assertEquals(header.getText(),"LambdaTest Sample App 1");
+        Assert.assertEquals(header.getText(),"LambdaTest Sample App");
     }
 }
