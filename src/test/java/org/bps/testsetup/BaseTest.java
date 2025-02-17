@@ -3,11 +3,9 @@ package org.bps.testsetup;
 import org.bps.browserSetup.BrowserFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
+@Listeners(CustomTestListener.class)
 public class BaseTest {
     protected static WebDriver driver;
 
