@@ -17,7 +17,7 @@ public class ToDoAppFlow extends Assertions {
 
     public ToDoAppFlow validate_todoApp_header() {
         String actualHeaderText = todoAppPage.getHeaderText();
-        String expectedHeaderText = "LambdaTest Sample App";
+        String expectedHeaderText = "LambdaTest Sample App ";
         assertText(actualHeaderText,expectedHeaderText);
         return this;
     }

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class TodoAppPage {
     public WebDriver driver;
-    public By todoAppHeader = By.cssSelector("container h2");
+    public By todoAppHeader = By.cssSelector(".container h2");
 
     public TodoAppPage() throws Exception {
         driver = BrowserFactory.driver();
@@ -18,7 +18,7 @@ public class TodoAppPage {
     }
     public String getHeaderText(){
         System.out.println("Title " + driver.getTitle());
-        WebElement header = driver.findElement(By.cssSelector("container h2"));
+        WebElement header = driver.findElement(todoAppHeader);
         return header.getText();
     }
 }
