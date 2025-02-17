@@ -2,6 +2,7 @@
 
 <suite name="Addition Suite" verbose="1">
     <test name="Addition">
+        <parameter name="browser" value="EDGE"/>
         <classes>
             <class name="org.bps.SampleTest" />
         </classes>
