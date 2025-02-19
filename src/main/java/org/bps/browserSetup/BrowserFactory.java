@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 
 public class BrowserFactory {
     public static WebDriver driver;
@@ -24,11 +25,16 @@ public class BrowserFactory {
         switch (browser){
             case "CHROME" :
                 ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--headless");
                 options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(options);
                 return driver;
             case "FIREFOX" : driver =  new FirefoxDriver(); return driver;
-            case "SAFARI" : driver=  new SafariDriver(); return driver;
+            case "SAFARI" :
+                SafariOptions safariOptions = new SafariOptions();
+                safariOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+                driver=  new SafariDriver(safariOptions); return driver;
+
             case "EDGE" : driver=  new EdgeDriver(); return driver;
             default: return null;
         }

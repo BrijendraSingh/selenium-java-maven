@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium web app testing">
+    <suite-files>
+        <suite-file path="selenium-app-login-page.xml" />
+    </suite-files>
+</suite>

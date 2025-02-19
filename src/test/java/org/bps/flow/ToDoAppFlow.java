@@ -1,7 +1,6 @@
 package org.bps.flow;
 
-import io.qameta.allure.Step;
-import org.bps.pom.TodoAppPage;
+import org.bps.pom.todoapp.TodoAppPage;
 import org.bps.testassertions.Assertions;
 
 public class ToDoAppFlow extends Assertions {
@@ -20,8 +19,12 @@ public class ToDoAppFlow extends Assertions {
 //    @Step("validate todo app header")
     public ToDoAppFlow validate_todoApp_header() {
         String actualHeaderText = todoAppPage.getHeaderText();
-        String expectedHeaderText = "LambdaTest Sample App ";
+        String expectedHeaderText = "LambdaTest Sample App";
         assertText(actualHeaderText,expectedHeaderText);
+        return this;
+    }
+    public  ToDoAppFlow clickOnChecklistItems(){
+        todoAppPage.clickOnAllItems();
         return this;
     }
 

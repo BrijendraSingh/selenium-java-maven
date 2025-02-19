@@ -7,7 +7,7 @@
     <test name="Addition">
         <parameter name="browser" value="CHROME"/>
         <classes>
-            <class name="org.bps.TodoAppTest" />
+            <class name="org.bps.todoapp.TodoAppTest" />
         </classes>
     </test>
 </suite>
