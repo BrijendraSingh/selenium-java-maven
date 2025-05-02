@@ -2,7 +2,8 @@
 
 <suite name="Addition Suite" verbose="1">
     <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"></listener>
+        <listener class-name="org.bps.testsetup.RetryListener"></listener>
     </listeners>
     <test name="Addition">
         <parameter name="browser" value="CHROME"/>

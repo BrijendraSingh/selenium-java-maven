@@ -75,7 +75,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.15.2</version> <!-- Use the latest version -->
                 <configuration>
-                    <reportVersion>2.29.1</reportVersion> <!-- Allure report version -->
+                    <reportVersion>2.32.2</reportVersion> <!-- Allure report version -->
                     <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
                 </configuration>
             </plugin>

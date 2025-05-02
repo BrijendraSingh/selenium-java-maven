@@ -20,6 +20,7 @@ public class TodoAppPage extends Wait{
 
     public void launchTodoApp(){
         driver.get("https://lambdatest.github.io/sample-todo-app/");
+        System.out.println("app is launched");
     }
     public String getHeaderText(){
         System.out.println("Title " + driver.getTitle());
@@ -36,5 +37,6 @@ public class TodoAppPage extends Wait{
         waitForSeconds(5);
         driver.findElement(list3rdItem).click();
         waitForSeconds(2);
+        System.out.println("All Items clicked");
     }
 }
