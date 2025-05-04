@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 public class BaseTest {
     protected static WebDriver driver;
 
-    @BeforeClass
+    @BeforeMethod
     @Parameters("browser")
     public void driverSetup(String browser){
         driver=BrowserFactory.initiateDriver(browser);
@@ -18,10 +18,11 @@ public class BaseTest {
     @AfterMethod
     public void afterTestSetup(final ITestResult result){
         System.out.println("Test Name is " + result.getMethod().getQualifiedName());
+        driver.close();
     }
 
     @AfterClass
     public void driverCleanUp(){
-        driver.close();
+//        driver.close();
     }
 }

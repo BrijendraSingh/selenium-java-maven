@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Wait {
+public class ElementOperations {
     public WebDriver driver;
-    public Wait() throws Exception {
+    public ElementOperations() throws Exception {
         driver = BrowserFactory.driver();
     }
     public  void waitForMinutes(int minutes){

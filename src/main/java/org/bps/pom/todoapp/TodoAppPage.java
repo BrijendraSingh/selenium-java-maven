@@ -1,21 +1,19 @@
 package org.bps.pom.todoapp;
 
 import org.bps.browserSetup.BrowserFactory;
-import org.bps.utils.Wait;
+import org.bps.utils.ElementOperations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
-public class TodoAppPage extends Wait{
-    public WebDriver driver;
-
+public class TodoAppPage extends ElementOperations {
     public By todoAppHeader = By.cssSelector(".container h2");
     public By listHeading = By.cssSelector("div.container div > span");
     public By list3rdItem = RelativeLocator.with(By.cssSelector("input")).below(listHeading);
 
     public TodoAppPage() throws Exception {
-        driver = BrowserFactory.driver();
+        super();
     }
 
     public void launchTodoApp(){
@@ -34,9 +32,9 @@ public class TodoAppPage extends Wait{
         WebElement secondItem= driver.findElement(RelativeLocator.with(By.cssSelector("input")).below(firstItem));
         firstItem.click();
         secondItem.click();
-        waitForSeconds(5);
+        waitForSeconds(1);
         driver.findElement(list3rdItem).click();
-        waitForSeconds(2);
+        waitForSeconds(1);
         System.out.println("All Items clicked");
     }
 }

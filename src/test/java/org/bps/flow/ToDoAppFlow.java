@@ -20,7 +20,7 @@ public class ToDoAppFlow extends Assertions {
 //    @Step("validate todo app header")
     public ToDoAppFlow validate_todoApp_header() {
         String actualHeaderText = todoAppPage.getHeaderText();
-        String expectedHeaderText = "LambdaTest Sample App ";
+        String expectedHeaderText = "LambdaTest Sample App";
         System.out.println("validating header");
         assertText(actualHeaderText,expectedHeaderText);
         System.out.println("header validated");

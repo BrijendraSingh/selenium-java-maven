@@ -10,11 +10,21 @@ public class TodoAppTest extends BaseTest {
 
     @Test
     @Description("todo app header check test for allure reporting")
-    public void todoAppHeaderCheck() throws Exception {
+    public void todoAppHeaderCheckOne() throws Exception {
         todoAppUser = new ToDoAppFlow();
         todoAppUser
                 .launch_todoApp()
                 .validate_todoApp_header()
+                .clickOnChecklistItems()
+                .done();
+    }
+
+    @Test
+    public void todoAppHeaderCheckTwo() throws Exception {
+        todoAppUser = new ToDoAppFlow();
+        todoAppUser
+                .launch_todoApp()
+//                .validate_todoApp_header()
                 .clickOnChecklistItems()
                 .done();
     }

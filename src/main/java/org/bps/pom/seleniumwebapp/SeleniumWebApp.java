@@ -1,12 +1,10 @@
 package org.bps.pom.seleniumwebapp;
 
 import org.bps.browserSetup.BrowserFactory;
-import org.bps.utils.Wait;
-import org.openqa.selenium.By;
+import org.bps.utils.ElementOperations;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.pagefactory.ByAll;
 
-public class SeleniumWebApp extends Wait {
+public class SeleniumWebApp extends ElementOperations {
     public WebDriver driver;
 
     public SeleniumWebApp() throws Exception {
